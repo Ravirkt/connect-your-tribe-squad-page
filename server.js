@@ -58,6 +58,13 @@ app.get('/', async function (request, response) {
   // Geef ook de eerder opgehaalde squad data mee aan de view
   response.render('index.liquid', {persons: personResponseJSON.data, squads: squadResponseJSON.data})
 })
+// voor kleuren ophalen
+app.get('/', async function (request, response) {
+  const personResponse = await fetch('https://fdnd.directus.app/items/person?fields=name,fav_color&filter[fav_color][_neq]=null')
+  const personResponseJSON = await personResponse.json()
+
+  response.render('index.liquid', { persons: personResponseJSON.data })
+})
 
 // Maak een POST route voor de index; hiermee kun je bijvoorbeeld formulieren afvangen
 app.post('/', async function (request, response) {
@@ -89,3 +96,10 @@ app.listen(app.get('port'), function () {
   // Toon een bericht in de console en geef het poortnummer door
   console.log(`Application started on http://localhost:${app.get('port')}`)
 })
+
+
+
+
+
+
+

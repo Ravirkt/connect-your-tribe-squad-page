@@ -133,42 +133,11 @@ figure img {
 
 
 
-.color-1, .color-2, .color-3, .color-4, .color-5, .color-6, .color-7, .color-8 {
+.color-item {
   height: 1em;
   width: 1em;
   border-radius: 100%;
 
-  &.color-1 {
-    background-color: red;
-  }
-
-  &.color-2 {
-    background-color: rgb(184, 110, 25);
-  }
-
-  &.color-3{
-    background-color: rgb(244, 234, 50);
-  }
-
-  &.color-4 {
-    background-color: rgb(95, 175, 24);
-  }
-
-  &.color-5 {
-    background-color: rgb(32, 51, 218);
-  }
-
-  &.color-6{
-    background-color: rgb(100, 56, 196);
-  }
-
-  &.color-7 {
-    background-color: rgb(93, 93, 93);
-  }
-
-  &.color-8 {
-    background-color: rgb(234, 116, 224);
-  }
 }
 
 .color-nav-items {
