@@ -35,47 +35,17 @@
 
     <nav>
       <h2 class="colors-label">Colors</h2>
+
+
       <ul class="colors-container">
-        <a class="color-nav-items">
-          <button class="color-1"></button>
-          <p class="color-name">Red</p>
-        </a>
-    
-        <a class="color-nav-items">
-          <button class="color-2"></button>
-          <p class="color-name">Orange</p>
-        </a>
-    
-        <a class="color-nav-items">
-          <button class="color-3"></button>
-          <p class="color-name">Geel</p>
-        </a>
-    
-        <a class="color-nav-items">
-          <button class="color-4"></button>
-          <p class="color-name">Groen</p>
-        </a>
-    
-        <a class="color-nav-items">
-          <button class="color-5"></button>
-          <p class="color-name">Blauw</p>
-        </a>
-    
-        <a class="color-nav-items">
-          <button class="color-6"></button>
-          <p class="color-name">Paars</p>
-        </a>
-    
-        <a class="color-nav-items">
-          <button class="color-7"></button>
-          <p class="color-name">Grijs</p>
-        </a>
-    
-        <a class="color-nav-items">
-          <button class="color-8"></button>
-          <p class="color-name">Pink</p>
-        </a>
-      </ul>
+  {% for person in persons %}
+    <a class="color-nav-items">
+      <button class="color-item" style="background-color: {{ person.fav_color }};"></button>
+      <p class="color-name">{{ person.fav_color }}</p>
+    </a>
+  {% endfor %}
+</ul>
+
           
           
       
@@ -248,7 +218,7 @@
 
     </div>
 
- 
+    {% comment %} fdnd.directus.app/items/person/?fields=squads?fields=fav_color&filter[fav_color][_neq]=null&sort=fav_color&groupBy=fav_color {% endcomment %}
 
 <script>
 
@@ -276,19 +246,31 @@
 
 
 
+  <ul>
+    {% for person in persons %}
+      <li>
+        <span> {{ person.fav_color }}</span>
+      </li>
+    {% endfor %}
+  </ul>
+  
 
 
-
-
-
-
-
-
-
-{% comment %} <ul>
+ <ul>
   {% for person in persons %}
     <li><a href="/student/{{ person.id }}">{{ person.name }}</a></li>
   {% endfor %}
-</ul> {% endcomment %}
+</ul>  
 
 {% render 'partials/foot.liquid', squads: squads %}
+
+{% comment %} alle kleuren ophalen {% endcomment %}
+
+{% comment %} https://fdnd.directus.app/items/person/?fields=fav_color&filter[fav_color][_neq]=null&sort=fav_color&groupBy=fav_color {% endcomment %}
+
+{% comment %} https://fdnd.directus.app/items/person?fields=fav_color,name&filter[fav_color][_neq]=null {% endcomment %}
+
+
+{% comment %} kleur met naam ophalen {% endcomment %}
+
+{% comment %} fdnd.directus.app/items/person/?fields=*,squads.squad_id.&filter= {% endcomment %}
