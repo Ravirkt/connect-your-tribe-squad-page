@@ -14,7 +14,6 @@ header {
   grid-template-columns: 12em;
   grid-template-rows: 5em;
   background-color: #2a2827;
-
 }
 
 .header-button-container {
@@ -24,15 +23,16 @@ header {
   align-items: center;
   padding: var(--padding-sections);
   background-color: #2a2827;
-  
 }
 
 nav {
   background-color: #2a2827;
 }
 
-
-.red, .yellow, .green, .blue {
+.red,
+.yellow,
+.green,
+.blue {
   height: 1.5em;
   width: 1.5em;
   border-radius: 100%;
@@ -67,9 +67,10 @@ nav {
   }
 }
 
-
-
-.resize-icon, .min-icon, .close-icon, .toggle-menu {
+.resize-icon,
+.min-icon,
+.close-icon,
+.toggle-menu {
   color: rgba(0, 0, 0, 0.195);
 }
 
@@ -87,7 +88,7 @@ nav {
 
 .mugshot-container {
   display: grid;
-  grid-template-columns: 1fr ;
+  grid-template-columns: 1fr;
   grid-template-rows: auto;
   justify-content: center;
   align-items: center;
@@ -103,7 +104,6 @@ nav {
   @media (min-width: 1000px) {
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }
-  
 }
 
 .mugshot-item {
@@ -114,30 +114,20 @@ nav {
   align-items: center;
 }
 
-
 main {
-  background-color: #21211E;
+  background-color: #21211e;
   border: 1px solid rgb(0, 0, 0);
-
 }
-
-
 
 figure img {
   height: 15em;
   width: 13em;
 }
 
-
-
-
-
-
 .color-item {
   height: 1em;
   width: 1em;
   border-radius: 100%;
-
 }
 
 .color-nav-items {
@@ -152,13 +142,3 @@ figure img {
 .colors-label {
   padding-left: 1em;
 }
-
-
-
-
-
-
-
-
-
-
