@@ -61,6 +61,17 @@
   <main>
     <h1 class="header-title">Squadpage</h1>
 
+    {% comment %} https://shopify.github.io/liquid/filters/replace/ {% endcomment %}
+    {% comment %} https://shopify.github.io/liquid/filters/downcase/ {% endcomment %}
+    <div class="mugshot-container">
+      {% for person in persons %}
+        <figure class="mugshot-item">
+          <img src="./assets/mugshots/{{ person.name | replace: ' ', '_' | downcase }}_processed.jpg" alt="{{ person.name }}">
+          <figcaption>{{ person.name }}</figcaption>
+        </figure>
+      {% endfor %}
+    </div>
+    
 
 
 
